@@ -4,9 +4,7 @@ class Solution:
         for i in tokens:
             if i.isdigit() or (i[0] == '-' and i[1:].isdigit()):
                 stack.append(int(i))
-            else:
-                if len(stack) < 2:  
-                    return 0  
+            else: 
                 n = stack.pop()
                 m = stack.pop()
                 if i == '+':
