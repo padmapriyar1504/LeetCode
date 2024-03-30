@@ -1,9 +1,6 @@
 class MinStack:
 
     def __init__(self):
-        """
-        initialize your data structure here.
-        """
         self.stack = []
         self.min_stack = []  # to keep track of the minimum element
 
