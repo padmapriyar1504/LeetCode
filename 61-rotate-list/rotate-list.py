@@ -16,9 +16,17 @@ class Solution:
         if k == 0:
             return head
         newTail = head
-        for i in range(length - k - 1):
-            newTail = newTail.next
-        newHead = newTail.next
-        newTail.next = None
-        tail.next = head
-        return newHead
+        for _ in range(k):
+            temp = head
+            prev = None
+            
+            while temp.next:
+                prev = temp
+                temp = temp.next
+            
+            actualend = temp
+            actualend.next = head
+            prev.next = None
+            head = actualend
+        
+        return head
