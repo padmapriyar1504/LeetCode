@@ -15,7 +15,6 @@ class Solution:
         k = k % length
         if k == 0:
             return head
-        newTail = head
         for _ in range(k):
             temp = head
             prev = None
